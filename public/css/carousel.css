@@ -1,0 +1,24 @@
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 2rem;
+  z-index: 10;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.carousel-item {
+  height: 28rem;
+}
+
+.bg-img {
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
