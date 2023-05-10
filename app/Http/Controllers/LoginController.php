@@ -26,7 +26,7 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return back()->with('loginError', 'Login Gagal! Periksa kembali nama akun Anda!');
+        return back()->with('loginError', 'Login Gagal! Silahkan periksa kembali nama akun Anda!');
 
     }
 

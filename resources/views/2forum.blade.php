@@ -13,6 +13,7 @@
           
       <div class="col">
         <div class="card shadow-sm">
+          <div class=""></div>
           <img src="{{ asset('storage/' . $forum->image) }}" class="w-100">
           <div class="card-body">
             <h3 class="card-text">{{ $forum->title }}</h3>

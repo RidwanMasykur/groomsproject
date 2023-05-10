@@ -20,12 +20,18 @@ class RegisterController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email:dns|unique:users',
-            'password' => 'required|min:5|max:255'
+            'address' => 'required|max:250',
+            'phone' => 'required|numeric|min:11',
+            'password' => 'required|min:5|max:255',
+        ]);
+        
+        $request->validate([
+            'roles' => 'required'
         ]);
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        User::create($validatedData);
+        User::create($validatedData)->assignRole($request->post("roles"));
 
         return redirect('/login')->with('success', 'Akun Anda berhasil ditambahkan! Silahkan Masuk!');
     }

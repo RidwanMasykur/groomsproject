@@ -3,6 +3,18 @@
 @section('container')
 <div class="row justify-content-center">
     <div class="col-md-4">
+      @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ session('success') }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      @endif
+      @if(session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{ session('loginError') }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      @endif
         <main class="form-signin w-100 m-auto">
             <h1 class="h4 mb-3 fw-normal">Silahkan Isi Data</h1>
             <form action="/login" method="post">
