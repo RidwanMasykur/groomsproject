@@ -75,7 +75,7 @@ class DashboardForumController extends Controller
         ];
 
         if($request->file('image')) {
-            $rules['image'] = 'image|file|max:1024|required';
+            $rules['image'] = 'image|file|required';
         }
 
         $validated = $request->validate($rules);
@@ -89,17 +89,11 @@ class DashboardForumController extends Controller
 
         $forum->update($validated);
 
-        return redirect('/dashboard/forum')->with('notify', 'Berhasil mengubah data.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Forum $forum)
     {
         Storage::delete($forum->image);
         $forum->delete();
-
-        return redirect('/dashboard/forum')->with('notify', 'Berhasil menghapus data.');
     }
 }
