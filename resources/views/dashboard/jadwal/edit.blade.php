@@ -7,8 +7,8 @@
 </div>
 
 <div class="col-lg-9">
-    <img src="{{ asset('storage/' . $forum->image) }}" class="w-25">
-    <form method="post" action="/dashboard/forum/{{ $forum->id }}" enctype="multipart/form-data">
+    <img src="{{ asset('storage/' . $jadwal->image) }}" class="w-25">
+    <form method="post" action="/dashboard/jadwal/{{ $jadwal->id }}" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="mb-3">

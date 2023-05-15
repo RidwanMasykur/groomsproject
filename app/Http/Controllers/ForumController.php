@@ -42,7 +42,6 @@ class ForumController extends Controller
     function komentarDestroy($komentar_id, $forum_id) {
         Komentar::where('id', $komentar_id)->delete();
 
-        return redirect("/forum/$forum_id/lihat")->with('notify', 'Berhasil Menghapus Komentar.');
     }
 
     function komentarUpdate(Request $request, Komentar $komentar, $forum_id) {
@@ -52,6 +51,5 @@ class ForumController extends Controller
 
         $komentar->update($validated);
 
-        return redirect("/forum/$forum_id/lihat")->with('notify', 'Berhasil Mengedit Komentar.');
     }
 }

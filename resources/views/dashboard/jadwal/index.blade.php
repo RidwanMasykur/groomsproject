@@ -16,10 +16,11 @@
       <th scope="col">Tanggal Awal Bibit</th>
       <th scope="col">Lokasi</th>
       <th scope="col">Jumlah</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    @foreach ($penjadwalan as $jadwal)
+    @foreach ($jadwals as $jadwal)
         <tr>
           <td>{{ $loop->index + 1 }}</td>
           <td>
@@ -27,11 +28,11 @@
           </td>
           <td>{{ $jadwal->title }}</td>
           <td>
-            <a href="/dashboard/jadwal/{{ $jadwal->id }}/edit" class="btn btn-outline-dark mb-5">Ubah Postingan</a>
+            <a href="/dashboard/jadwal/{{ $jadwal->id }}/edit" class="btn btn-outline-dark mb-5">Ubah Jadwal</a>
             <form action="/dashboard/jadwal/{{ $jadwal->id }}" method="post">
               @csrf
               @method('delete')
-              <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus postingan?')">Hapus Postingan</button>
+              <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus jadwal?')">Hapus Postingan</button>
             </form>
           </td>
         </tr>
@@ -39,7 +40,7 @@
   </tbody>
 </table>
 
-{{ $penjadwalan->links() }}
+{{ $jadwals->links() }}
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 

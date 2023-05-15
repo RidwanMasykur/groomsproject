@@ -12,7 +12,10 @@ class DashboardJadwalController extends Controller
      */
     public function index()
     {
-        return view('dashboard/jadwal/index');
+        $jadwal = Jadwal::all();
+        return view('dashboard/jadwal/index',[
+            'penjadwalan' => $jadwal,
+        ]);
     }
 
     /**
