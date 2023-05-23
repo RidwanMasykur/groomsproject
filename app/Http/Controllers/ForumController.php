@@ -11,7 +11,7 @@ class ForumController extends Controller
     function index() {
         return view ('2forum',[
             "title" => "Grooms Forum",
-            'forums' => Forum::paginate(6)
+            'forums' => Forum::paginate(20)
         ]);
     }
 
@@ -41,6 +41,8 @@ class ForumController extends Controller
 
     function komentarDestroy($komentar_id, $forum_id) {
         Komentar::where('id', $komentar_id)->delete();
+
+        return back();
 
     }
 

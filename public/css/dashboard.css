@@ -7,21 +7,13 @@ body {
   height: 16px;
 }
 
-/*
- * Sidebar
- */
-
 .sidebar {
   position: fixed;
   top: 0;
-  /* rtl:raw:
-  right: 0;
-  */
   bottom: 0;
-  /* rtl:remove */
   left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
+  z-index: 100;
+  padding: 48px 0 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
@@ -34,7 +26,7 @@ body {
 .sidebar-sticky {
   height: calc(100vh - 48px);
   overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  overflow-y: auto; 
 }
 
 .sidebar .nav-link {
@@ -59,10 +51,6 @@ body {
 .sidebar-heading {
   font-size: .75rem;
 }
-
-/*
- * Navbar
- */
 
 .navbar-brand {
   padding-top: .75rem;
@@ -89,4 +77,13 @@ body {
 .form-control-dark:focus {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.image{
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+}
+.image img{
+  width: min-content;
 }

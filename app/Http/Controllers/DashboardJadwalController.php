@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Jadwal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Storage;
 
 class DashboardJadwalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        $jadwal = Jadwal::all();
+        $jadwal = Jadwal::paginate(20);
         return view('dashboard/jadwal/index',[
-            'penjadwalan' => $jadwal,
+            'jadwals' => $jadwal,
         ]);
     }
 
@@ -23,7 +23,7 @@ class DashboardJadwalController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard/jadwal/create');
     }
 
     /**
@@ -31,7 +31,19 @@ class DashboardJadwalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required',
+            'image' => 'image|file|required',
+            'body' => 'required',
+            'caption' => 'required'
+        ]);
+
+        $validated['image'] = $request->file('image')->store('post_image');
+        $validated['user_id'] = auth()->user()->id;
+        $validated['excerpt'] = Str::words($validated['body'], 10);
+
+        Forum::create($validated);
+        return redirect('dashboard/jadwal');
     }
 
     /**
@@ -47,7 +59,9 @@ class DashboardJadwalController extends Controller
      */
     public function edit(Jadwal $jadwal)
     {
-        //
+        return view('dashboard/jadwal/edit', [
+            'jadwal' => $jadwal
+        ]);
     }
 
     /**
@@ -55,14 +69,34 @@ class DashboardJadwalController extends Controller
      */
     public function update(Request $request, Jadwal $jadwal)
     {
-        //
+        $rules = [
+            'title' => 'required',
+            'body' => 'required'
+        ];
+
+        if($request->file('image')) {
+            $rules['image'] = 'image|file|required';
+        }
+
+        $validated = $request->validate($rules);
+
+        if($request->file('image')) {
+            Storage::delete($jadwal->image);
+            $validated['image'] = $request->file('image')->store('post_image');
+        }
+
+        $validated['excerpt'] = Str::words($validated['body'], 20);
+
+        $jadwal->update($validated);
+        return redirect('dashboard/jadwal');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Jadwal $jadwal)
     {
-        //
+        Storage::delete($jadwal->image);
+        $jadwal->delete();
+
+        return back();
     }
 }

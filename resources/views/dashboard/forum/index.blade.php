@@ -13,7 +13,7 @@
       <th scope="col">No</th>
       <th scope="col" class="w-25">Gambar</th>
       <th scope="col">Judul</th>
-      <th scope="col"></th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>

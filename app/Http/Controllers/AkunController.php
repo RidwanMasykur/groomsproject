@@ -20,7 +20,7 @@ class AkunController extends Controller
         ]);
 
         $user = User::find(auth()->user()->id);
-        // dd($request->file("profile_img")->getClientOriginalName());
+
         if($request->file("profile_img")){
             $user
                 ->addMediaFromRequest("profile_img")

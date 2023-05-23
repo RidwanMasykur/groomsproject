@@ -9,32 +9,25 @@ use Storage;
 
 class DashboardForumController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         return view('dashboard/forum/index',[
-            'forums' => Forum::where('user_id', auth()->user()->id)->paginate(5)
+            'forums' => Forum::where('user_id', auth()->user()->id)->paginate(20)
+            
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('dashboard/forum/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
             'title' => 'required',
-            'image' => 'image|file|max:1024|required',
+            'image' => 'image|file|required',
             'body' => 'required'
         ]);
 
@@ -43,20 +36,14 @@ class DashboardForumController extends Controller
         $validated['excerpt'] = Str::words($validated['body'], 10);
 
         Forum::create($validated);
-        return redirect('/dashboard/forum')->with('notify', 'Berhasil Menambah Data.');
+        return redirect('dashboard/forum');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Forum $forum)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(Forum $forum)
     {
         return view('dashboard/forum/edit', [
@@ -64,9 +51,6 @@ class DashboardForumController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Forum $forum)
     {
         $rules = [
@@ -85,9 +69,10 @@ class DashboardForumController extends Controller
             $validated['image'] = $request->file('image')->store('post_image');
         }
 
-        $validated['excerpt'] = Str::words($validated['body'], 10);
+        $validated['excerpt'] = Str::words($validated['body'], 20);
 
         $forum->update($validated);
+        return redirect('dashboard/forum');
 
     }
 
@@ -95,5 +80,7 @@ class DashboardForumController extends Controller
     {
         Storage::delete($forum->image);
         $forum->delete();
+
+        return back();
     }
 }

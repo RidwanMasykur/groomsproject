@@ -4,6 +4,7 @@ use App\Models\Forum;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardForumController;
@@ -57,6 +58,4 @@ Route::middleware("auth")->group(function(){
     Route::get('/forum/{forum}/lihat', [ForumController::class, 'lihat']);
     Route::get('/forum/{id}/komentar', [ForumController::class, 'komentar']);
     Route::get('/forum/{komentar_id}/{forum_id}/komentar/hapus', [ForumController::class, 'komentarDestroy']);
-    Route::put('/forum/{komentar}/{forum_id}/komentar/edit', [ForumController::class, 'komentarUpdate']);
-
 });

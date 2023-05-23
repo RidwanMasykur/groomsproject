@@ -15,7 +15,9 @@
     @endif
     <div class="container-fluid row justify-content-center">
         <div class="col-lg-12 d-flex flex-column align-items-center">
-            <div class="d-flex flex-column align-items-center text-center img-profile"><img class="rounded-circle" width="150px" src="{{ auth()->user()->getFirstMediaUrl("profile") != "" ? auth()->user()->getFirstMediaUrl("profile") : '/img/orang.jpg' }}"></div>
+            <div class="d-flex flex-column align-items-center text-center img-profile">
+                <img class="rounded mx-auto d-block" width="150px" src="{{ auth()->user()->getFirstMediaUrl("profile") != "" ? auth()->user()->getFirstMediaUrl("profile") : '/img/orang.jpg' }}">
+            </div>
             <div class="col-md-3 border-right">
                 <input type="file" accept="image/png, image/gif, image/jpeg" name="profile_img">
             </div>
@@ -30,7 +32,7 @@
                         <div class="col-md-6"><label class="labels">Email</label><input readonly type="email"  name="email" class="form-control" placeholder="Email" value="{{ auth()->user()->email }}"></div>
                         <div class="col-md-6"><label class="labels">Alamat</label><input type="text" name="address" class="form-control" placeholder="Alamat" value="{{ auth()->user()->address }}"></div>
                     </div>
-                    <div class="mt-3 text-center"><button class="btn btn-dark profile-button" type="submit">Save Profile</button></div>
+                    <div class="mt-3 text-center"><button class="btn btn-dark profile-button" type="submit">Simpan Profil</button></div>
                 </div>
             </div>
         </div>

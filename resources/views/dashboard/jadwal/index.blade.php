@@ -16,7 +16,7 @@
       <th scope="col">Tanggal Awal Bibit</th>
       <th scope="col">Lokasi</th>
       <th scope="col">Jumlah</th>
-      <th scope="col"></th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>

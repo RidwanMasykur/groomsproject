@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/price.css">
+    <link rel="stylesheet" href="/css/lihatgambar.css">
+    <style>.groomforum{width:350px ;height: 350px ;padding: 10px} .fitimg{height: 200px; width:fit-content; text-align: center} img{height: 200px; display: block; margin-left: auto; margin-right: auto;}</style>
     <title>{{ $title }}</title>
+
 
   </head>
   <body>
 
-    @include('partials/navbar')
+    @include('partials.navbar')
 
 <div style="margin-top: 70px">
     @yield('container')

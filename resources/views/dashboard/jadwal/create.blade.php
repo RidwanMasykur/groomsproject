@@ -22,12 +22,9 @@
             <label>Nama Jamur</label>
             <input type="text" class="form-control" name="title">
         </div>
-        <div class="input-group date" data-provide="datepicker">
+        <div class="mb-3">
             <label>Tanggal Awal Bibit</label>
-            <input type="text" class="form-control">
-            <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-            </div>
+            <input type="text" class="form-control" name="text">
         </div>
         <div class="mb-3">
             <label>Lokasi</label>

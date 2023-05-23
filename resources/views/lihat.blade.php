@@ -1,10 +1,12 @@
-@extends('layouts/main')
+@extends('layouts.main')
 
 @section('container')
 
 <div class="container text-center my-5">
   <h3>{{ $forum->title }}</h3>
-  <img src="{{ asset('storage/' . $forum->image) }}" class="w-50">
+  <div class="image d-flex">
+    <img src="{{ asset('storage/' . $forum->image) }}">
+  </div>
   <p>{!! $forum->body !!}</p>
 </div>
 

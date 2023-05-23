@@ -12,9 +12,8 @@
       @foreach ($forums as $forum)
           
       <div class="col">
-        <div class="card shadow-sm">
-          <div class=""></div>
-          <img src="{{ asset('storage/' . $forum->image) }}" class="w-100">
+        <div class="groomforum card shadow-sm">
+          <p class="fitimg"><img src="{{ asset('storage/' . $forum->image) }}" class="w-100"></p>
           <div class="card-body">
             <h3 class="card-text">{{ $forum->title }}</h3>
             {!!  str_replace(['<div>', '</div>'], '', $forum->excerpt)  !!}
