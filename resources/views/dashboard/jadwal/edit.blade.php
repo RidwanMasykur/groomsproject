@@ -22,22 +22,19 @@
         </div>
         <div class="mb-3">
             <label>Nama Jamur</label>
-            <input type="text" class="form-control" name="title">
+            <input type="text" class="form-control" name="title" readonly>
         </div>
-        <div class="input-group date" data-provide="datepicker">
+        <div class="mb-3">
             <label>Tanggal Awal Bibit</label>
-            <input type="text" class="form-control">
-            <div class="input-group-addon">
-                <span class="glyphicon glyphicon-th"></span>
-            </div>
+            <input type="date" class="form-control" name="text">
         </div>
         <div class="mb-3">
             <label>Lokasi</label>
-            <input type="text" class="form-control" name="text">
+            <input type="text" class="form-control" name="text" readonly>
         </div>
         <div class="mb-3">
             <label>Jumlah</label>
-            <input type="text" class="form-control" name="text">
+            <input type="number" class="form-control" name="number" readonly>
         </div>
         <button type="submit" class="btn btn-dark" onclick="return confirm('Apakah Anda yakin mengubah jadwal?')">Simpan</button>
     </form>

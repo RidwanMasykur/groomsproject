@@ -16,7 +16,7 @@
             <p class="fitimg"><img src="{{ asset('storage/' . $forum->image) }}" class="w-100"></p>
             <div class="card-body">
               <h3 class="card-text">{{ $forum->title }}</h3>
-              {!!  str_replace(['<div>', '</div>'], '', $forum->excerpt)  !!}
+              {{ \Illuminate\Support\Str::limit(strip_tags($forum->excerpt), 30, '...') }}
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="forum/{{ $forum->id }}/lihat" class="btn btn-sm btn-outline-primary">Lihat</a>

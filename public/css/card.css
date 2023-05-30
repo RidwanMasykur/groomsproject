@@ -1,0 +1,25 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .card {
+    width: 300px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    /* tambahkan properti lain sesuai kebutuhan */
+  }
+  
+  .card h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .card p {
+    color: #666;
+    font-size: 14px;
+  }
+    

@@ -5,7 +5,7 @@
     <h1 class="h2">Penjadwalan</h1>
 </div>
 
-<a href="/dashboard/jadwal/create" class="btn btn-dark mb-3">Tambah Jadwal</a>
+<a href="/dashboard/jadwal/create" class="btn btn-success mb-3">Tambah Jadwal +</a>
 
 <table class="table table-striped">
   <thead>
@@ -28,13 +28,22 @@
           </td>
           <td>{{ $jadwal->title }}</td>
           <td>
-            <a href="/dashboard/jadwal/{{ $jadwal->id }}/edit" class="btn btn-outline-dark mb-5">Ubah Jadwal</a>
-            <form action="/dashboard/jadwal/{{ $jadwal->id }}" method="post">
-              @csrf
-              @method('delete')
-              <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus jadwal?')">Hapus Postingan</button>
-            </form>
+            {{ $jadwal->created_at }}
           </td>
+          <td>
+            {{ $jadwal->body }}
+          </td>
+          <td>
+            {{ $jadwal->caption }}
+          </td>
+            <td>
+              <a href="/dashboard/jadwal" class="btn btn-success mb-5">Selesai</a>
+              <form action="/dashboard/jadwal/{{ $jadwal->id }}" method="post">
+                @csrf
+                @method('delete')
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus jadwal?')">Hapus Jadwal</button>
+              </form>
+            </td>
         </tr>
     @endforeach
   </tbody>

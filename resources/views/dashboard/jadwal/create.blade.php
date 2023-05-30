@@ -24,17 +24,17 @@
         </div>
         <div class="mb-3">
             <label>Tanggal Awal Bibit</label>
-            <input type="text" class="form-control" name="text">
+            <input type="date" class="form-control" name="text">
         </div>
         <div class="mb-3">
             <label>Lokasi</label>
-            <input type="text" class="form-control" name="text">
+            <input type="text" class="form-control" name="body">
         </div>
         <div class="mb-3">
             <label>Jumlah</label>
-            <input type="text" class="form-control" name="text">
+            <input type="text" class="form-control" name="caption">
         </div>
-        <button type="submit" class="btn btn-dark" onclick="return confirm('Apakah Anda yakin menyimpan jadwal?')">Simpan</button>
+        <button type="submit" class="btn btn-success">Simpan</button>
     </form>
 </div>
 

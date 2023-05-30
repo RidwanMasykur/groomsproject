@@ -32,7 +32,7 @@
                         <div class="col-md-6"><label class="labels">Email</label><input readonly type="email"  name="email" class="form-control" placeholder="Email" value="{{ auth()->user()->email }}"></div>
                         <div class="col-md-6"><label class="labels">Alamat</label><input type="text" name="address" class="form-control" placeholder="Alamat" value="{{ auth()->user()->address }}"></div>
                     </div>
-                    <div class="mt-3 text-center"><button class="btn btn-dark profile-button" type="submit">Simpan Profil</button></div>
+                    <div class="mt-3 text-center"><button class="btn btn-success profile-button" type="submit">Simpan</button></div>
                 </div>
             </div>
         </div>

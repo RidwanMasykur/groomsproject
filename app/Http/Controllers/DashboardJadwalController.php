@@ -31,18 +31,21 @@ class DashboardJadwalController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'title' => 'required',
             'image' => 'image|file|required',
             'body' => 'required',
             'caption' => 'required'
         ]);
+        
 
         $validated['image'] = $request->file('image')->store('post_image');
         $validated['user_id'] = auth()->user()->id;
         $validated['excerpt'] = Str::words($validated['body'], 10);
-
-        Forum::create($validated);
+        
+        
+        Jadwal::create($validated);
         return redirect('dashboard/jadwal');
     }
 

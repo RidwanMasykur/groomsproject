@@ -10,13 +10,13 @@
             <a class="nav-link disabled {{ ($title === "Grooms Home") ? 'active' : '' }}" href="/">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled {{ ($title === "Grooms Forum") ? 'active' : '' }}" href="/forum">Forum</a>
+            <a class="nav-link {{ ($title === "Grooms Forum") ? 'active' : '' }}" href="/forum">Forum</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled {{ ($title === "Grooms Jadwal") ? 'active' : '' }}" href="/jadwal">Jadwal</a>
+            <a class="nav-link {{ ($title === "Grooms Jadwal") ? 'active' : '' }}" href="/jadwal">Jadwal</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled {{ ($title === "Grooms Belanja") ? 'active' : '' }}" href="/belanja">Belanja</a>
+            <a class="nav-link {{ ($title === "Grooms Belanja") ? 'active' : '' }}" href="/belanja">Belanja</a>
           </li>
         </ul>
 

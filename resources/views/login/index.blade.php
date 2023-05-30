@@ -1,7 +1,7 @@
 @extends('layouts/main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center mb-10">
   <img src="" class="bg-img">
     <div class="col-md-4">
       @if(session()->has('success'))
