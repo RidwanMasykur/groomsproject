@@ -11,7 +11,7 @@
           <div class="card-body">
             <h1 class="card-title">{{ $produk->title }}</h1>
             <h5 class="card-text">Rp{{ $produk->price }}</h5>
-            <p class="card-text">Stok : {{ $produk->excerpt }}</p>
+            <p class="card-text">Stok : {{ $produk->stok }}</p>
             <h3 class="card-text">{{ $produk->caption }}</h3>
             <a href='/dashboard/pemesanan/create' class="btn btn-outline-success">Beli</a>
           </div>

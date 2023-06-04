@@ -43,7 +43,6 @@ class DashboardMebelProdukController extends Controller
         $validated['image'] = $request->file('image')->store('post_image');
         $validated['user_id'] = auth()->user()->id;
         $validated['price'] = Str::words($validated['price'], 10);
-        $validated['excerpt'] = Str::words($validated['stok'], 10);
         
         
         Produk::create($validated);

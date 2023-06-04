@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('image')->nullable();
             $table->integer('price');
-            $table->text('excerpt');
+            $table->integer('stok');
             $table->text('caption');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

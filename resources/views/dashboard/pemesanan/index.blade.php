@@ -16,11 +16,15 @@
       <th scope="col">No. Telepon</th>
       <th scope="col">Pembayaran</th>
       <th scope="col">Jumlah</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
-    @foreach ($pemesanans as $pemesanan)
+    @foreach ($pemesanans as $key => $pemesanan)
         <tr>
+          <td>
+            {{ $key +1}}
+          </td>
           <td>
             {{ $pemesanan->name }}
           </td>

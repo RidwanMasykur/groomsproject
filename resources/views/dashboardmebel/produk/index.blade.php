@@ -31,7 +31,7 @@
             {{ $produk->price }}
           </td>
           <td>
-            {{ $produk->excerpt }}
+            {{ $produk->stok }}
           </td>
           <td>
             {{ $produk->caption }}

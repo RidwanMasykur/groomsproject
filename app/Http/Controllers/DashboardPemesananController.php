@@ -33,7 +33,7 @@ class DashboardPemesananController extends Controller
             'payment' => 'required',
             'amount' => 'required'
         ]);
-        
+         $validated["user_id"]=auth()->user()->id;
 
         // $validated['name'] = auth()->user()->id;
         // $validated['address'] = auth()->user()->id;
