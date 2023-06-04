@@ -13,7 +13,7 @@ class DashboardMebelProdukController extends Controller
     public function index()
     {
         $produk = Produk::paginate(20);
-        return view('/dashboardmebel/produk/index',[
+        return view('dashboardmebel.produk.index',[
             'produks' => $produk,
         ]);
     }

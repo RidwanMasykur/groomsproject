@@ -16,6 +16,7 @@
       <th scope="col">No. Telepon</th>
       <th scope="col">Pembayaran</th>
       <th scope="col">Jumlah</th>
+      <th scope="col">Status Pesanan</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -39,6 +40,9 @@
           </td>
           <td>
             {{ $pemesanan->amount }}
+          </td>
+          <td>
+            <span style="display: flex;width: 100%;justify-content: center;color: #FFF; padding: 10px;border-radius: 10px;background: lightgreen;">{{ $pemesanan->status }}</span>
           </td>
             <td>
               <form action="/dashboard/pemesanan/{{ $pemesanan->id }}" method="post">

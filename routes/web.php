@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardJadwalController;
 use App\Http\Controllers\DashboardBelanjaController;
 use App\Http\Controllers\DashboardPemesananController;
 use App\Http\Controllers\DashboardMebelProdukController;
+use App\Http\Controllers\DashboardMebelPesananMasukController;
 
 
 Route::get('/', function () {
@@ -62,6 +63,7 @@ Route::middleware("auth")->group(function(){
     Route::get('/forum/{id}/komentar', [ForumController::class, 'komentar']);
     Route::get('/forum/{komentar_id}/{forum_id}/komentar/hapus', [ForumController::class, 'komentarDestroy']);
     Route::resource('/dashboardmebel/produk', DashboardMebelProdukController::class);
+    Route::resource('/dashboardmebel/pesananmasuk', DashboardMebelPesananMasukController::class);
     Route::get('/dashboardmebel/akun', [AkunController::class, 'akun']);
     Route::post('/dashboardmebel/akun', [AkunController::class, 'edit']);
 });

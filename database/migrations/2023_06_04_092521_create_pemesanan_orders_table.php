@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('payment');
             $table->string('amount');
+            $table->enum('status',['dikemas','dikirim'])->default("dikemas");
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });

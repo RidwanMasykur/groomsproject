@@ -17,11 +17,19 @@ class DatabaseSeeder extends Seeder
         Role::create(['name' => 'PetaniJamur']);
         Role::create(['name' => 'Mebel']);
         \App\Models\User::create([
-            'name' => 'User',
+            'name' => 'Ridwan',
             'email' => 'ridwanmasykur05@gmail.com',
             'address' => 'btb',
             'phone' => '08978676753',
             'password' => bcrypt('123')
         ])->assignRole('PetaniJamur');
+
+        \App\Models\User::create([
+            'name' => 'User',
+            'email' => 'gunzxx@gmail.com',
+            'address' => 'btb',
+            'phone' => '08978676753',
+            'password' => bcrypt('123')
+        ])->assignRole('Mebel');
     }
 }
