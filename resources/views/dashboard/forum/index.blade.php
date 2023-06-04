@@ -5,7 +5,7 @@
     <h1 class="h2">Forum</h1>
 </div>
 
-<a href="/dashboard/forum/create" class="btn btn-success mb-3">Tambah Postingan</a>
+<a href="/dashboard/forum/create" class="btn btn-success mb-3">Tambah Postingan +</a>
 
 <table class="table table-striped">
   <thead>

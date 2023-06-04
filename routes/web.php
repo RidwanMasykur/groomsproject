@@ -4,12 +4,13 @@ use App\Models\Forum;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AkunController;
 use App\Http\Controllers\ForumController;
-use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardForumController;
 use App\Http\Controllers\DashboardJadwalController;
 use App\Http\Controllers\DashboardBelanjaController;
+use App\Http\Controllers\DashboardMebelProdukController;
 
 
 Route::get('/', function () {
@@ -59,3 +60,4 @@ Route::middleware("auth")->group(function(){
     Route::get('/forum/{id}/komentar', [ForumController::class, 'komentar']);
     Route::get('/forum/{komentar_id}/{forum_id}/komentar/hapus', [ForumController::class, 'komentarDestroy']);
 });
+

@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('dashboardmebel.layouts2.main')
 
 @section('container')
 
@@ -7,7 +7,7 @@
 </div>
 
 <div class="col-lg-9">
-    <form method="post" action="/dashboard/jadwal" enctype="multipart/form-data">
+    <form method="post" action="/dashboardmebel/produk" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="image" class="form-label">Masukkan Gambar!</label>
@@ -19,20 +19,20 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label>Nama Jamur</label>
+            <label>Nama Produk</label>
             <input type="text" class="form-control" name="title">
         </div>
         <div class="mb-3">
-            <label>Tanggal Awal Bibit</label>
-            <input type="date" class="form-control" name="text">
+            <label>Harga</label>
+            <input type="price" class="form-control" name="text">
         </div>
         <div class="mb-3">
-            <label>Lokasi</label>
-            <input type="text" class="form-control" name="body">
-        </div>
-        <div class="mb-3">
-            <label>Jumlah</label>
+            <label>Stok</label>
             <input type="number" class="form-control" name="caption">
+        </div>
+        <div class="mb-3">
+            <label>Deskripsi</label>
+            <input type="text" class="form-control" name="body">
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>
     </form>

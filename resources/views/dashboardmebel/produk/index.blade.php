@@ -1,11 +1,11 @@
-@extends('dashboard/layouts/main')
+@extends('dashboardmebel.layouts2.main')
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Penjadwalan</h1>
+    <h1 class="h2">Penprodukan</h1>
 </div>
 
-<a href="/dashboard/jadwal/create" class="btn btn-success mb-3">Tambah Jadwal +</a>
+<a href="/dashboardmebel/produk/create" class="btn btn-success mb-3">Tambah produk +</a>
 
 <table class="table table-striped">
   <thead>
@@ -20,28 +20,28 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($jadwals as $jadwal)
+    @foreach ($produks as $produk)
         <tr>
           <td>{{ $loop->index + 1 }}</td>
           <td>
-            <img src="{{ asset('storage/' . $jadwal->image) }}" class="w-100">
+            <img src="{{ asset('storage/' . $produk->image) }}" class="w-100">
           </td>
-          <td>{{ $jadwal->title }}</td>
+          <td>{{ $produk->title }}</td>
           <td>
-            {{ date('d-m-Y',strtotime($jadwal->created_at)) }}
-          </td>
-          <td>
-            {{ $jadwal->body }}
+            {{ date('d-m-Y',strtotime($produk->created_at)) }}
           </td>
           <td>
-            {{ $jadwal->caption }}
+            {{ $produk->body }}
+          </td>
+          <td>
+            {{ $produk->caption }}
           </td>
             <td>
-              <a href="/dashboard/jadwal/{{ $jadwal->id }}/edit" class="btn btn-outline-dark mb-5">Ubah Jadwal</a>
-              <form action="/dashboard/jadwal/{{ $jadwal->id }}" method="post">
+              <a href="/dashboardmebel/produk/{{ $produk->id }}/edit" class="btn btn-outline-dark mb-5">Ubah produk</a>
+              <form action="/dashboardmebel/produk/{{ $produk->id }}" method="post">
                 @csrf
                 @method('delete')
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus jadwal?')">Hapus Jadwal</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus produk?')">Hapus produk</button>
               </form>
             </td>
         </tr>
@@ -49,7 +49,7 @@
   </tbody>
 </table>
 
-{{ $jadwals->links() }}
+{{ $produks->links() }}
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 

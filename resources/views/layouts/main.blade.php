@@ -6,8 +6,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/carousel.css">
-    <link rel="stylesheet" href="/css/price.css">
-    <link rel="stylesheet" href="/css/lihatgambar.css">
     <style>.groomforum{width:350px ;height: 350px ;padding: 10px} .fitimg{height: 200px; width:fit-content; text-align: center} img{height: 200px; display: block; margin-left: auto; margin-right: auto;}</style>
     <title>{{ $title }}</title>
 

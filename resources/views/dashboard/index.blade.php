@@ -21,6 +21,9 @@
                 <div class="btn-group">
                   <a href="forum/{{ $forum->id }}/lihat" class="btn btn-sm btn-outline-primary">Lihat</a>
                 </div>
+                <p>
+                  {{ date('d-m-Y',strtotime($forum->created_at)) }}
+                </p>
               </div>
             </div>
           </div>

@@ -28,13 +28,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    @if (auth()->user()->getRoleNames()[0] == "Mebel")
-        
-    @include('dashboardmebel.layouts2.sidebar')
-    @else
     @include('dashboard.layouts.sidebar')
-        
-    @endif
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       @yield('container')

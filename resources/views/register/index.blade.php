@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md-4">
         <main class="form-registration w-100 m-auto">
-            <h1 class="h4 mb-3 fw-normal">Silahkan Isi Data</h1>
+            <center><h1 class="h4 mb-3 fw-normal">Daftar Sebagai :</h1></center>
             <form action="/register" method="post">
               @csrf
               <div class="form-group mb-3 d-flex justify-content-center gap-2">

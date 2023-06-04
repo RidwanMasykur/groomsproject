@@ -8,17 +8,13 @@ use Illuminate\Routing\Controller;
 
 class JadwalController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+    function index() {
+        return view ('3jadwal',[
+            "title" => "Grooms Jadwal",
+            'jadwals' => Jadwal::paginate(20)
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
