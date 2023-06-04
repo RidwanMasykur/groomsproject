@@ -26,6 +26,12 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/pemesanan') ? 'active' : ''}}" href="/dashboard/pemesanan">
+            <span data-feather="shopping-bag" class="align-text-bottom"></span>
+            Pemesanan
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/akun') ? 'active' : ''}}" href="/dashboard/akun">
             <span data-feather="user" class="align-text-bottom"></span>
             Akun

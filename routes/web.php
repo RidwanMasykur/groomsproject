@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardForumController;
 use App\Http\Controllers\DashboardJadwalController;
 use App\Http\Controllers\DashboardBelanjaController;
+use App\Http\Controllers\DashboardPemesananController;
 use App\Http\Controllers\DashboardMebelProdukController;
 
 
@@ -52,6 +53,7 @@ Route::middleware("auth")->group(function(){
     Route::resource('/dashboard/forum', DashboardForumController::class);
     Route::resource('/dashboard/jadwal', DashboardJadwalController::class);
     Route::resource('/dashboard/belanja', DashboardBelanjaController::class);
+    Route::resource('/dashboard/pemesanan', DashboardPemesananController::class);
     Route::get('/dashboard/akun', [AkunController::class, 'akun']);
     Route::post('/dashboard/akun', [AkunController::class, 'edit']);
     
@@ -59,5 +61,7 @@ Route::middleware("auth")->group(function(){
     Route::get('/forum/{forum}/lihat', [ForumController::class, 'lihat']);
     Route::get('/forum/{id}/komentar', [ForumController::class, 'komentar']);
     Route::get('/forum/{komentar_id}/{forum_id}/komentar/hapus', [ForumController::class, 'komentarDestroy']);
+    Route::resource('/dashboardmebel/produk', DashboardMebelProdukController::class);
+    Route::get('/dashboardmebel/akun', [AkunController::class, 'akun']);
+    Route::post('/dashboardmebel/akun', [AkunController::class, 'edit']);
 });
-

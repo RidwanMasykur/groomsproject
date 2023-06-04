@@ -8,7 +8,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboardmebel') ? 'active' : ''}}" href="/dashboardmebel/pesananmasuk">
+          <a class="nav-link {{ Request::is('dashboardmebel/pesananmasuk') ? 'active' : ''}}" href="/dashboardmebel/pesananmasuk">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Pesanan Masuk
           </a>

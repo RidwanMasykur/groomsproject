@@ -28,6 +28,7 @@
 
 <div class="container-fluid">
   <div class="row">
+    {{-- {{ dd(auth()->user()->getRoleNames()[0]) }} --}}
     @if (auth()->user()->getRoleNames()[0] == "Mebel")
         
     @include('dashboardmebel.layouts2.sidebar')

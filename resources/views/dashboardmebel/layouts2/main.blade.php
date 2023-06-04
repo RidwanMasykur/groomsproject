@@ -24,11 +24,11 @@
   </head>
   <body>
     
-@include('dashboard.layouts.header')
+@include('dashboardmebel.layouts2.header')
 
 <div class="container-fluid">
   <div class="row">
-    @include('dashboard.layouts.sidebar')
+    @include('dashboardmebel.layouts2.sidebar')
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       @yield('container')

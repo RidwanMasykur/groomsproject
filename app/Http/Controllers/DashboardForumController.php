@@ -13,8 +13,7 @@ class DashboardForumController extends Controller
     public function index()
     {
         return view('dashboard/forum/index',[
-            'forums' => Forum::where('user_id', auth()->user()->id)->paginate(20)
-            
+            'forums' => Forum::where('user_id', auth()->user()->id)->paginate(20) 
         ]);
     }
 

@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Penprodukan</h1>
+    <h1 class="h2">Produk</h1>
 </div>
 
 <a href="/dashboardmebel/produk/create" class="btn btn-success mb-3">Tambah produk +</a>
@@ -12,10 +12,10 @@
     <tr>
       <th scope="col">No</th>
       <th scope="col" class="w-25">Gambar</th>
-      <th scope="col">Nama Jamur</th>
-      <th scope="col">Tanggal Awal Bibit</th>
-      <th scope="col">Lokasi</th>
-      <th scope="col">Jumlah</th>
+      <th scope="col">Nama Produk</th>
+      <th scope="col">Harga</th>
+      <th scope="col">Stok</th>
+      <th scope="col">Deskripsi</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -28,10 +28,10 @@
           </td>
           <td>{{ $produk->title }}</td>
           <td>
-            {{ date('d-m-Y',strtotime($produk->created_at)) }}
+            {{ $produk->price }}
           </td>
           <td>
-            {{ $produk->body }}
+            {{ $produk->excerpt }}
           </td>
           <td>
             {{ $produk->caption }}

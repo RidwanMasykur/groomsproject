@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Buat Jadwal Baru</h1>
+    <h1 class="h2">Buat Produk Baru</h1>
 </div>
 
 <div class="col-lg-9">
@@ -24,15 +24,15 @@
         </div>
         <div class="mb-3">
             <label>Harga</label>
-            <input type="price" class="form-control" name="text">
+            <input type="number" class="form-control" name="price">
         </div>
         <div class="mb-3">
             <label>Stok</label>
-            <input type="number" class="form-control" name="caption">
+            <input type="number" class="form-control" name="stok">
         </div>
         <div class="mb-3">
             <label>Deskripsi</label>
-            <input type="text" class="form-control" name="body">
+            <input type="text" class="form-control" name="caption">
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>
     </form>

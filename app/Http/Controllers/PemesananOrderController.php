@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produk;
-use App\Models\Belanja;
-use Illuminate\Http\Request;
+use App\Models\pemesanan_order;
+use App\Http\Requests\Storepemesanan_orderRequest;
+use App\Http\Requests\Updatepemesanan_orderRequest;
 
-class DashboardBelanjaController extends Controller
+class PemesananOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $produk = Produk::paginate(20);
-        return view('dashboard/belanja/index',[
-            'produks' => $produk,
-        ]);
+        //
     }
 
     /**
@@ -30,7 +27,7 @@ class DashboardBelanjaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Storepemesanan_orderRequest $request)
     {
         //
     }
@@ -38,7 +35,7 @@ class DashboardBelanjaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Belanja $belanja)
+    public function show(pemesanan_order $pemesanan_order)
     {
         //
     }
@@ -46,7 +43,7 @@ class DashboardBelanjaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Belanja $belanja)
+    public function edit(pemesanan_order $pemesanan_order)
     {
         //
     }
@@ -54,7 +51,7 @@ class DashboardBelanjaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Belanja $belanja)
+    public function update(Updatepemesanan_orderRequest $request, pemesanan_order $pemesanan_order)
     {
         //
     }
@@ -62,7 +59,7 @@ class DashboardBelanjaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Belanja $belanja)
+    public function destroy(pemesanan_order $pemesanan_order)
     {
         //
     }

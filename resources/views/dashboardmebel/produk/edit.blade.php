@@ -3,12 +3,12 @@
 @section('container')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Ubah Jadwal</h1>
+    <h1 class="h2">Ubah Produk</h1>
 </div>
 
 <div class="col-lg-9">
-    <img src="{{ asset('storage/' . $jadwal->image) }}" class="w-25">
-    <form method="post" action="/dashboard/jadwal/{{ $jadwal->id }}" enctype="multipart/form-data">
+    <img src="{{ asset('storage/' . $produk->image) }}" class="w-25">
+    <form method="post" action="/dashboardmebel/produk/{{ $produk->id }}" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="mb-3">
@@ -21,22 +21,22 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label>Nama Jamur</label>
-            <input type="text" class="form-control" name="title" readonly>
+            <label>Nama Produk</label>
+            <input type="text" class="form-control" name="title">
         </div>
         <div class="mb-3">
-            <label>Tanggal Awal Bibit</label>
-            <input type="date" class="form-control" name="text">
+            <label>Harga</label>
+            <input type="number" class="form-control" name="price">
         </div>
         <div class="mb-3">
-            <label>Lokasi</label>
-            <input type="text" class="form-control" name="text" readonly>
+            <label>Stok</label>
+            <input type="number" class="form-control" name="stok">
         </div>
         <div class="mb-3">
-            <label>Jumlah</label>
-            <input type="number" class="form-control" name="number" readonly>
+            <label>Deskrpsi</label>
+            <input type="text" class="form-control" name="caption">
         </div>
-        <button type="submit" class="btn btn-dark" onclick="return confirm('Apakah Anda yakin mengubah jadwal?')">Simpan</button>
+        <button type="submit" class="btn btn-dark" onclick="return confirm('Apakah Anda yakin mengubah produk?')">Simpan</button>
     </form>
 </div>
 
