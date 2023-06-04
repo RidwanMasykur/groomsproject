@@ -90,7 +90,7 @@ class DashboardMebelProdukController extends Controller
             $validated['image'] = $request->file('image')->store('post_image');
         }
 
-        $validated['excerpt'] = Str::words($validated['stok'], 20);
+        $validated['stok'] = Str::words($validated['stok'], 20);
 
         $produk->update($validated);
         return redirect('/dashboardmebel/produk');

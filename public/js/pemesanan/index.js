@@ -9,9 +9,9 @@ $(document).ready(()=>{
             id:id,
             status:status,
         },(e)=>{
-            // console.log(e);
+
         }).done((e)=>{
-            // console.log(e);
+
         }).fail((e)=>{
             console.log(e.responseJSON.message);
         })

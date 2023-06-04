@@ -12,12 +12,12 @@
           <li class="nav-item">
             <a class="nav-link disabled {{ ($title === "Grooms Forum") ? 'active' : '' }}" href="/forum">Forum</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link disabled {{ ($title === "Grooms Jadwal") ? 'active' : '' }}" href="/jadwal">Jadwal</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled {{ ($title === "Grooms Belanja") ? 'active' : '' }}" href="/belanja">Belanja</a>
-          </li>
+          </li> --}}
         </ul>
 
         <ul class="navbar-nav ms-auto">
