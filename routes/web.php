@@ -3,6 +3,7 @@
 use App\Models\Forum;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AkunController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\JadwalController;
@@ -67,3 +68,5 @@ Route::middleware("auth")->group(function(){
     Route::get('/dashboardmebel/akun', [AkunController::class, 'akun']);
     Route::post('/dashboardmebel/akun', [AkunController::class, 'edit']);
 });
+
+Route::resource('/dashboard/admin', AdminController::class)->middleware('auth');

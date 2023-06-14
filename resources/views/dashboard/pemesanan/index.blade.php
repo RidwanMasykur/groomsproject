@@ -5,7 +5,7 @@
     <h1 class="h2">Pemesanan</h1>
 </div>
 
-<a href="/dashboard/pemesanan/create" class="btn btn-success mb-3">Tambah Pemesanan +</a>
+{{-- <a href="/dashboard/pemesanan/create" class="btn btn-success mb-3">Tambah Pemesanan +</a> --}}
 
 <table class="table table-striped">
   <thead>
@@ -39,7 +39,7 @@
             {{ $pemesanan->payment }}
           </td>
           <td>
-            {{ $pemesanan->amount }}
+            {{ $pemesanan->amount }} kg
           </td>
           <td>
             <span style="display: flex;width: 100%;justify-content: center;color: #FFF; padding: 10px;border-radius: 10px;background: lightgreen;">{{ $pemesanan->status }}</span>
@@ -48,7 +48,7 @@
               <form action="/dashboard/pemesanan/{{ $pemesanan->id }}" method="post">
                 @csrf
                 @method('delete')
-                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus pemesanan?')">Hapus pemesanan</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin membatalkan pesanan?')">Batalkan pesanan</button>
               </form>
             </td>
         </tr>

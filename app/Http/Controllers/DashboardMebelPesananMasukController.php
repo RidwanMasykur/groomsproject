@@ -22,4 +22,13 @@ class DashboardMebelPesananMasukController extends Controller
 
         Pemesanan::find($id)->update(['status'=>$status]);
     }
+
+    public function destroy(Pemesanan $pesananmasuk)
+    {
+        {
+            $pesananmasuk->delete();
+    
+            return back();
+        }
+    }
 }

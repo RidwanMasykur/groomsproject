@@ -23,7 +23,7 @@
         </div>
         <div class="mb-3">
             <label>Pembayaran</label>
-            <input type="text" value="COD" class="form-control" name="payment" readonly>
+            <input type="text" value="COD (Bayar di Tempat)" class="form-control" name="payment" readonly>
         </div>
         <div class="mb-3">
             <label>Jumlah</label>

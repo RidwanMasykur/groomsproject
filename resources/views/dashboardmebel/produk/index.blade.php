@@ -5,7 +5,7 @@
     <h1 class="h2">Produk</h1>
 </div>
 
-<a href="/dashboardmebel/produk/create" class="btn btn-success mb-3">Tambah produk +</a>
+<a href="/dashboardmebel/produk/create" class="btn btn-success mb-3">Tambah Produk +</a>
 
 <table class="table table-striped">
   <thead>
