@@ -53,9 +53,9 @@ Route::middleware("auth")->group(function(){
     });
     
     Route::resource('/dashboard/forum', DashboardForumController::class);
-    Route::resource('/dashboard/jadwal', DashboardJadwalController::class);
-    Route::resource('/dashboard/belanja', DashboardBelanjaController::class);
-    Route::resource('/dashboard/pemesanan', DashboardPemesananController::class);
+    Route::resource('/dashboard/jadwal', DashboardJadwalController::class)->middleware('auth');
+    Route::resource('/dashboard/belanja', DashboardBelanjaController::class)->middleware('auth');
+    Route::resource('/dashboard/pemesanan', DashboardPemesananController::class)->middleware('auth');
     Route::get('/dashboard/akun', [AkunController::class, 'akun']);
     Route::post('/dashboard/akun', [AkunController::class, 'edit']);
     
