@@ -30,9 +30,6 @@
               @csrf
               @method('delete')
               <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin menghapus postingan?')">Hapus Postingan</button>
-              <div class="btn-group">
-                <a href="forum/{{ $forum->id }}/lihat" class="btn btn-sm btn-outline-primary">Lihat</a>
-              </div>
             </form>
           </td>
         </tr>
