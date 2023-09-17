@@ -3,12 +3,12 @@ Ini adalah projek akhir saya di salah satu matkul yang saya tempuh. Website ini 
 Untuk menjalankan websitenya silahkan nyalakan XAMPP terlebih dahulu dengan MySQL juga. Jangan lupa juga untuk di migrate sebelum dideploy.
 
 Fitur :
-Login sebagai petani jamur
-Login sebagai mebel kayu
-Forum dengan postingan foto dan komentar (Khusus sebagai petani jamur saja)
-Penjadwalan
-Belanja
-Akun
+- Login sebagai petani jamur
+- Login sebagai mebel kayu
+- Forum dengan postingan foto dan komentar (Khusus sebagai petani jamur saja)
+- Penjadwalan
+- Belanja
+- Akun
 
 
 Jalankan perintah ini untuk migrate :
