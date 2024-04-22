@@ -14,4 +14,3 @@ Fitur :
 Jalankan perintah ini untuk migrate :
 php artisan migrate:fresh --seed
 
-Mohon maaf untuk websitenya tidak di hosting, karena tidak punya uang. Indonesia negaraku, Niagahoster webhostingku
